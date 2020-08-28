@@ -7,6 +7,8 @@ open WebSharper.UI
 open WebSharper.UI.Client
 open WebSharper.UI.Templating
 
+open MathNet.Numerics
+
 [<JavaScript>]
 module Client =
     // The templates are loaded from the DOM, so you just can edit index.html
@@ -23,7 +25,11 @@ module Client =
     [<SPAEntryPoint>]
     let Main () =
         let newName = Var.Create ""
-
+        let c1 = Complex32(4.f, 0.f)
+        let c2 = Complex32(4.f, 2.f)
+        Console.Info (c1 + c2)
+        Doc.Empty
+        (*
         IndexTemplate.Main()
             .ListContainer(
                 People.View.DocSeqCached(fun (name: string) ->
@@ -36,4 +42,4 @@ module Client =
                 newName.Value <- ""
             )
             .Doc()
-        |> Doc.RunById "main"
+        |> Doc.RunById "main" *)
