@@ -1,3 +1,6 @@
 [submodule "ext/fparsec"]
 	path = ext/fparsec
 	url = https://github.com/stephan-tolksdorf/fparsec
+[submodule "ext/mathnet-numerics"]
+	path = ext/mathnet-numerics
+	url = https://github.com/allisterb/mathnet-numerics.git
