@@ -1,0 +1,3 @@
+[submodule "ext/fparsec"]
+	path = ext/fparsec
+	url = https://github.com/stephan-tolksdorf/fparsec
