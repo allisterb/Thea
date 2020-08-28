@@ -3,21 +3,61 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Thea.Lang.Unquote", "Lang\Thea.Lang.Unquote\Thea.Lang.Unquote.fsproj", "{7844BE86-E0F1-4A86-9550-201EF3514427}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{8052A185-0B04-4F5A-9002-F633E12426FD}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Unquote", "..\ext\Unquote\Unquote.fsproj", "{33625A2C-F0D6-4C58-9C9B-58EDAA705537}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FParsecCS-LowTrust", "..\ext\fparsec\FParsecCS\FParsecCS-LowTrust.csproj", "{37156C35-1ED5-4385-A91B-8FDA02753792}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FParsec", "FParsec", "{34EB0757-B958-4DEE-8F61-1FECF8869976}"
+	ProjectSection(SolutionItems) = preProject
+		..\ext\fparsec\Build\FParsec.Common.targets = ..\ext\fparsec\Build\FParsec.Common.targets
+		..\ext\fparsec\FParsecCS\FParsecCS.targets = ..\ext\fparsec\FParsecCS\FParsecCS.targets
+	EndProjectSection
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FParsec-LowTrust", "..\ext\fparsec\FParsec\FParsec-LowTrust.fsproj", "{E505BF9D-61D6-4ED7-8131-4AC1FA498D19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug-LowTrust|Any CPU = Debug-LowTrust|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Release-LowTrust|Any CPU = Release-LowTrust|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7844BE86-E0F1-4A86-9550-201EF3514427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7844BE86-E0F1-4A86-9550-201EF3514427}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7844BE86-E0F1-4A86-9550-201EF3514427}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7844BE86-E0F1-4A86-9550-201EF3514427}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33625A2C-F0D6-4C58-9C9B-58EDAA705537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33625A2C-F0D6-4C58-9C9B-58EDAA705537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33625A2C-F0D6-4C58-9C9B-58EDAA705537}.Debug-LowTrust|Any CPU.ActiveCfg = Debug|Any CPU
+		{33625A2C-F0D6-4C58-9C9B-58EDAA705537}.Debug-LowTrust|Any CPU.Build.0 = Debug|Any CPU
+		{33625A2C-F0D6-4C58-9C9B-58EDAA705537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33625A2C-F0D6-4C58-9C9B-58EDAA705537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33625A2C-F0D6-4C58-9C9B-58EDAA705537}.Release-LowTrust|Any CPU.ActiveCfg = Release|Any CPU
+		{33625A2C-F0D6-4C58-9C9B-58EDAA705537}.Release-LowTrust|Any CPU.Build.0 = Release|Any CPU
+		{37156C35-1ED5-4385-A91B-8FDA02753792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37156C35-1ED5-4385-A91B-8FDA02753792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37156C35-1ED5-4385-A91B-8FDA02753792}.Debug-LowTrust|Any CPU.ActiveCfg = Debug-LowTrust|Any CPU
+		{37156C35-1ED5-4385-A91B-8FDA02753792}.Debug-LowTrust|Any CPU.Build.0 = Debug-LowTrust|Any CPU
+		{37156C35-1ED5-4385-A91B-8FDA02753792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37156C35-1ED5-4385-A91B-8FDA02753792}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37156C35-1ED5-4385-A91B-8FDA02753792}.Release-LowTrust|Any CPU.ActiveCfg = Release-LowTrust|Any CPU
+		{37156C35-1ED5-4385-A91B-8FDA02753792}.Release-LowTrust|Any CPU.Build.0 = Release-LowTrust|Any CPU
+		{E505BF9D-61D6-4ED7-8131-4AC1FA498D19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E505BF9D-61D6-4ED7-8131-4AC1FA498D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E505BF9D-61D6-4ED7-8131-4AC1FA498D19}.Debug-LowTrust|Any CPU.ActiveCfg = Debug-LowTrust|Any CPU
+		{E505BF9D-61D6-4ED7-8131-4AC1FA498D19}.Debug-LowTrust|Any CPU.Build.0 = Debug-LowTrust|Any CPU
+		{E505BF9D-61D6-4ED7-8131-4AC1FA498D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E505BF9D-61D6-4ED7-8131-4AC1FA498D19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E505BF9D-61D6-4ED7-8131-4AC1FA498D19}.Release-LowTrust|Any CPU.ActiveCfg = Release-LowTrust|Any CPU
+		{E505BF9D-61D6-4ED7-8131-4AC1FA498D19}.Release-LowTrust|Any CPU.Build.0 = Release-LowTrust|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{33625A2C-F0D6-4C58-9C9B-58EDAA705537} = {8052A185-0B04-4F5A-9002-F633E12426FD}
+		{37156C35-1ED5-4385-A91B-8FDA02753792} = {34EB0757-B958-4DEE-8F61-1FECF8869976}
+		{34EB0757-B958-4DEE-8F61-1FECF8869976} = {8052A185-0B04-4F5A-9002-F633E12426FD}
+		{E505BF9D-61D6-4ED7-8131-4AC1FA498D19} = {34EB0757-B958-4DEE-8F61-1FECF8869976}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3987499-DF18-4EE6-8E85-180E7183F07F}
